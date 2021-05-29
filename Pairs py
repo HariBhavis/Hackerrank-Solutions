@@ -1,0 +1,6 @@
+def pairs(k, arr):
+    a = set(arr)
+    # make a set of all a[i] + k
+    b = set(x + k for x in arr)
+    # return the length of the intersection set
+    return len(a&b)
