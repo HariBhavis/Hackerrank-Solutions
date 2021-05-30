@@ -1,0 +1,10 @@
+def superDigit(n, k):
+    digits = map(int, list(n))
+    return get_super_digit(str(sum(digits) * k))
+
+def get_super_digit(p):
+    if len(p) == 1:
+        return int(p)
+    else:
+        digits = map(int, list(p))
+        return get_super_digit(str(sum(digits)))
