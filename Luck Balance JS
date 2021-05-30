@@ -1,0 +1,16 @@
+function luckBalance(k, contests) {
+    let sum = (x, y) => x + y;
+    let ic = contests.filter(x => x[1] === 1).map(x => x[0]).sort((x, y) => x - y);
+    let nic = contests.filter(x => x[1] === 0).map(x => x[0]).reduce(sum, 0);
+    let count = nic;
+    if (ic.length > k) {
+        let i = ic.length - k;
+        while (i--) {
+            count -= ic.shift();
+        }
+    }
+    count += ic.reduce(sum, 0)
+    return count;
+
+
+}
