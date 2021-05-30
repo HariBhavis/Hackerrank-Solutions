@@ -1,0 +1,11 @@
+function minimumAbsoluteDifference(arr) {
+    arr = arr.sort((x, y) => x - y);
+    var min = Number.MAX_VALUE;
+    for (var i = 1; i < arr.length; i++) {
+        if (min > Math.abs(arr[i-1] - arr[i])) {
+            min = Math.abs(arr[i-1] - arr[i]);
+        }
+    }
+    return min;
+
+}
