@@ -1,0 +1,12 @@
+class MyQueue(object):
+    def __init__(self):
+        self.q = []
+    
+    def peek(self):
+        return self.q[0]
+        
+    def pop(self):
+        self.q.pop(0)
+        
+    def put(self, value):
+        self.q.append(value)
