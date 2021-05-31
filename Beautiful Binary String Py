@@ -1,0 +1,10 @@
+def beautifulBinaryString(b):
+    # Write your code here
+    res = 0
+    
+    while '010' in b:
+        #print("found res = {} b = {}".format(res, b))
+        res += 1
+        b = b.replace("010","011", 1)
+        
+    return res
